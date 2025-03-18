@@ -168,7 +168,7 @@ int32_t main()
         Hostel_Total_Meals += Hostel[i].Total_Meals;
     }
 
-    cout << "\nNajmul Huda\nRoll:12\nSession : 2022-23\nDept. of CSE,NeU" << endl;
+  
     cout << "\n\t\t----------------------------" << endl;
     cout << "\t\t| Hostel Management System |" << endl;
     cout << "\t\t----------------------------" << endl;
