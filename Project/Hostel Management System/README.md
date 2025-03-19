@@ -5,22 +5,22 @@
 ## Project Overview:
 ### The Hostel Meal Management System is a software tool to track meal consumption, deposits, and costs in a hostel setting. The program uses a set of CSV files to store data for meals, deposits, and hostel costs, allowing users to interact with the system via a console interface. It provides an overview of meals consumed by hostel members, their deposits, balances, and overall cost management.
 
-## Project Components:
+##  Project Components:
 The project is divided into several key components:
 
-### Member Class:
+### 1. Member Class:
 Represents a hostel member and holds their details like name, total meals consumed, and total deposit made.
 
-### Deposit Class:
+### 2. Deposit Class:
 Represents a deposit entry, including the date, member's name, and amount deposited.
 
-### Meal History:
+### 3. Meal History:
 Tracks the number of meals consumed by each member on a particular day.
 
-### Hostel Cost:
+### 4. Hostel Cost:
 Tracks the overall cost of the hostel for each day.
 
-### CSV Files: 
+### 5. CSV Files: 
 Data is read from and written to CSV files:
 
 Meal_History.csv (meal consumption by members)
@@ -38,55 +38,93 @@ Hostel_Cost.csv (hostel costs)
 5. View a summary of all data with calculated balances.
    
 ### Files Used:
-#### Meal_History.csv: Stores the meal records of hostel members on different days.
+#### 1. Meal_History.csv: 
+Stores the meal records of hostel members on different days.
 
 Format: 
 Total Member(integer date type)
 Day, Member1_Meal, Member2_Meal, ..., MemberN_Meal
+
 Example:
+
 7
+
 Day  Najmul       Juel        Pias        Suhan       Labib       Badol       Sami
+
 1     2.0         2.5         2.5         2.5         2.0         2.5         2.5
+
 2     2.0         2.5         2.5         2.5         2.0         2.5         2.5
+
 3     2.0         2.5         2.5         2.5         2.0         2.5         2.5
+
 4     2.0         2.5         2.5         2.5         2.0         2.5         2.5
+
 5     2.0         2.5         2.5         2.5         2.0         2.5         2.5
+
 6     2.0         2.5         2.5         2.5         2.0         2.5         2.5
+
 7     2.0         2.5         2.5         2.5         2.0         2.5         2.5
+
 8     2.0         2.5         2.5         2.5         2.0         2.5         2.5
+
 9     2.0         2.5         2.5         2.5         2.0         2.5         2.5
+
 10    2.0         2.5         2.5         2.5         2.0         2.5         2.5
+
 
 #### Deposit.csv: Stores the deposit records made by the hostel members.
 
+
 Format: Date, Member_Name, Deposit_Amount
+
 Example:
+
 01/03/2025 Najmul 1000
+
 02/03/2025 Pias 2000
+
 03/03/2025 Juel 1500
+
 04/03/2025 Sami 2000
+
 05/03/2025 Suhan 1600
+
 06/03/2025 Badol 1200
+
 07/03/2025 Labib 5000
+
 
 #### Hostel_Cost.csv: Tracks the cost associated with running the hostel.
 
+
 Format: Date, Member_Name, Cost_Amount
+
 Example:
+
 01/01/2025 Najmul 1000
+
 02/01/2025 Pias 2000
+
 03/01/2025 Juel 1500
+
 04/01/2025 Sami 2000
+
 05/01/2025 Suhan 1600
+
 06/01/2025 Badol 1200
+
 07/01/2025 Labib 5000
 
 
+
 ### Core Functionality:
+
 #### Meal Management: 
+
 The system allows users to record daily meals consumed by each hostel member. The meal data is saved in Meal_History.csv, and the total meals consumed by each member is updated.
 
 #### Deposit Management:
+
 Users can add deposits made by hostel members, which are recorded in Deposit.csv. The total deposit amount for each member is updated.
 
 #### Cost Management: 
@@ -157,52 +195,94 @@ Option Choice
 Do you want? 1
 
 ##### Adding Meal:
+
 Najmul : 2
+
 Juel : 2.5
+
 Pias : 2.5
+
 Suhan : 2.5
+
 Labib : 2
+
 Badol : 2.5
+
 Sami : 2.5
+
 
 Meal adding Done.........
 
 
 ##### Viewing Meal Details:
 
+
 -----------------------------------------------------------------------------------
+
 |Day| Najmul    | Juel      | Pias      | Suhan     | Labib     | Badol     | Sami
+
 ------------------------------------------------------------------------------------
+
 1     2.0         2.5         2.5         2.5         2.0         2.5         2.5
+
 2     2.0         2.5         2.5         2.5         2.0         2.5         2.5
+
+
 3     2.0         2.5         2.5         2.5         2.0         2.5         2.5
+
 4     2.0         2.5         2.5         2.5         2.0         2.5         2.5
+
 5     2.0         2.5         2.5         2.5         2.0         2.5         2.5
+
 6     2.0         2.5         2.5         2.5         2.0         2.5         2.5
+
 7     2.0         2.5         2.5         2.5         2.0         2.5         2.5
+
 8     2.0         2.5         2.5         2.5         2.0         2.5         2.5
+
+
+
 9     2.0         2.5         2.5         2.5         2.0         2.5         2.5
+
 10    2.0         2.5         2.5         2.5         2.0         2.5         2.5
+
 
 
 #### Viewing Summary:
                     
                          Hostel Management System
 
----------------------------------------------------------------------------
-| Name           | Total Meals | Total Cost  | Deposit     | Balance      |
----------------------------------------------------------------------------
-| Najmul         | 20.00       | 1932.43     | 1000        | -932.43      |
-| Juel           | 25.00       | 2415.54     | 1500        | -915.54      |
-| Pias           | 25.00       | 2415.54     | 2000        | -415.54      |
-| Suhan          | 25.00       | 2415.54     | 1600        | -815.54      |
-| Labib          | 20.00       | 1932.43     | 5000        | 3067.57      |
-| Badol          | 25.00       | 2415.54     | 1200        | -1215.54     |
-| Sami           | 25.00       | 2415.54     | 2000        | -415.54      |
+
 ---------------------------------------------------------------------------
 
+| Name           | Total Meals | Total Cost  | Deposit     | Balance      |
+
+---------------------------------------------------------------------------
+
+| Najmul         | 20.00       | 1932.43     | 1000        | -932.43      |
+
+| Juel           | 25.00       | 2415.54     | 1500        | -915.54      |
+
+| Pias           | 25.00       | 2415.54     | 2000        | -415.54      |
+
+| Suhan          | 25.00       | 2415.54     | 1600        | -815.54      |
+
+| Labib          | 20.00       | 1932.43     | 5000        | 3067.57      |
+
+| Badol          | 25.00       | 2415.54     | 1200        | -1215.54     |
+
+| Sami           | 25.00       | 2415.54     | 2000        | -415.54      |
+
+---------------------------------------------------------------------------
+
+
+
 Hostel Total Cost : 14300
+
+
+
 Hostel Meal Rate : 96.62
+
 
  # Conclusion:
  
